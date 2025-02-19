@@ -17,6 +17,7 @@
     "proxy"
   ],
   "devDependencies": {
+    "@types/koa": "^2.3.0",
     "koa": "^2.3.0",
     "koa-body": "^2.5.0",
     "koa-convert": "^1.2.0",
