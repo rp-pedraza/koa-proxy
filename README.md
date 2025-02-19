@@ -1,4 +1,4 @@
-# koa-proxy [![Build Status](https://travis-ci.com/edorivai/koa-proxy.svg?branch=master)](https://travis-ci.com/edorivai/koa-proxy)
+# koa-proxy [![Build Status](https://github.com/rp-pedraza/koa-proxy/actions/workflows/node.js.yml/badge.svg)](https://github.com/rp-pedraza/koa-proxy/actions/workflows/node.js.yml)
 
 Proxy middleware for koa
 
