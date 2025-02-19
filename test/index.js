@@ -212,6 +212,27 @@ describe('koa-proxy', function() {
       });
   });
 
+  it("should have option host and match function", function(done) {
+    var app = new Koa();
+    app.use(proxy({
+        host: "http://localhost:1234",
+        match(path) {
+          return path.match(/^\/[a-z]+\.js$/);
+        }
+      }));
+    app.use(proxy({ host: "http://localhost:1234" }));
+    var server = http.createServer(app.callback());
+    request(server)
+      .get("/class.js")
+      .expect(200)
+      .expect("Content-Type", /javascript/)
+      .end(function(err, res) {
+        if (err) return done(err);
+        res.text.should.startWith('define("arale/class/1.0.0/class"');
+        done();
+      });
+  });
+
   it("should have option followRedirect", function(done) {
     var app = new Koa();
     app.use(proxy({ host: "http://localhost:1234", followRedirect: false }));

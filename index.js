@@ -36,7 +36,8 @@ module.exports = function(options) {
 
     // if match option supplied, restrict proxy to that match
     if (options.match) {
-      if (!ctx.path.match(options.match)) {
+      if (typeof options.match === 'function' ? !options.match(ctx.path) :
+          !ctx.path.match(options.match)) {
         return next();
       }
     }

@@ -70,6 +70,17 @@ app.use(proxy({
 }));
 ```
 
+A function can also be created instead.
+
+```js
+app.use(proxy({
+  host:  'http://alicdn.com',     // proxy alicdn.com...
+  match(path) {
+    return !path.match("/dontproxy.html"); // ...everything except /dontproxy.html
+  }
+}));
+```
+
 You can configure proxy to remember cookies for future use by setting `jar = true`. This means cookies set by server will be stored and resent in subsequent requests. For me info see the documentation for [request](https://github.com/request/request).
 
 ```js
@@ -93,7 +104,7 @@ app.use(proxy({
   overrideResponseHeaders: {
     "cow": "moo",
     "duck": "quack"
-    }, 
+    },
 }));
 ```
 
