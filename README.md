@@ -107,7 +107,3 @@ app.use(proxy({
     },
 }));
 ```
-
-## LICENSE
-
-Copyright (c) 2014 popomore. Licensed under the MIT license.

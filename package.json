@@ -1,5 +1,5 @@
 {
-  "name": "koa-proxy",
+  "name": "@rp-pedraza/koa-proxy",
   "version": "1.0.0-alpha.3",
   "description": "Proxy middleware for koa",
   "main": "index",
@@ -32,10 +32,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/edorivai/koa-proxy"
+    "url": "https://github.com/rp-pedraza/koa-proxy"
   },
-  "homepage": "https://github.com/edorivai/koa-proxy",
-  "author": "edorivai <edo.rivai@gmail.com>",
+  "homepage": "https://github.com/rp-pedraza/koa-proxy",
+  "author": "R.P. Pedraza <rp.pedraza@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "mocha -t 20000"
