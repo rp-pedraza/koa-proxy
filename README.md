@@ -48,7 +48,9 @@ You can specify a function that can map your request's path to the desired desti
 ```js
 app.get('index.js', proxy({
   host: 'http://alicdn.com',
-  map: function(path) { return 'public/' + path; }
+  map(path) {
+    return 'public/' + path;
+  }
 }));
 ```
 
