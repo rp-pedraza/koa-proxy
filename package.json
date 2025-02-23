@@ -1,6 +1,6 @@
 {
   "name": "@rp-pedraza/koa-proxy",
-  "version": "1.0.0-alpha.3.0.4",
+  "version": "1.0.0-alpha.3.0.5",
   "description": "Proxy middleware for koa",
   "main": "index",
   "dependencies": {
